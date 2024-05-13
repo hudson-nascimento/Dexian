@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Dexian.Api.props" />
+</Project>
