@@ -1,0 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+using Dexian.Commons;
+
+namespace Dexian.Entities;
+public class Escola : AuditableEntity
+{
+    [Key]
+    public int CodEscola { get; set; }    
+    public string? Decricao { get; set; }
+}
