@@ -57,3 +57,4 @@ D:\Projeto\Dexian\backend\src\Dexian.Api\bin\Debug\net8.0\NSwag.Core.Yaml.dll
 D:\Projeto\Dexian\backend\src\Dexian.Api\bin\Debug\net8.0\NSwag.Generation.dll
 D:\Projeto\Dexian\backend\src\Dexian.Api\bin\Debug\net8.0\NSwag.Generation.AspNetCore.dll
 D:\Projeto\Dexian\backend\src\Dexian.Api\bin\Debug\net8.0\YamlDotNet.dll
+D:\Projeto\Dexian\backend\src\Dexian.Api\obj\Debug\net8.0\Dexian.Api.sourcelink.json

@@ -2,6 +2,9 @@ using System.ComponentModel.DataAnnotations;
 using Dexian.Commons;
 
 namespace Dexian.Entities;
+/// <summary>
+/// Representa as propriedades de <see cref="Aluno"/>
+/// </summary>
 public class Aluno : AuditableEntity
 {
     [Key]
