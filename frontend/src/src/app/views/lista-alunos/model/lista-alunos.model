@@ -1,5 +1,0 @@
-
-export class ListaAlunosModel {
-    codAluno: Int16Array;
-    nome: string;
-  }
