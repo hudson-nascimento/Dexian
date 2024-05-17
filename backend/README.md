@@ -4,20 +4,22 @@
 ![](https://raw.githubusercontent.com/hudson-nascimento/Dexian/developer/backend/docs/screenshot-alunos-api.png?w=200)
 
 ## Description
-CRUD de alunos e escola.
+Aplicação CRUD com o framework Angular, consumindo uma API .NET.
+
 ## Setup
 
 ### Setup API
 
 ```shell
 $ git clone https://github.com/hudson-nascimento/Dexian.git
-$ cd .\backend\src
+$ cd .\backend\src\Dexian.Api
 $ dotnet restore
 $ dotnet build
 $ dotnet run
 ```
-Neste projeto foi habilitado o Swagger e o redoc para visualização da API.
-Para acessar via browser use:
+Neste projeto foi habilitado o [Swagger UI](https://swagger.io/tools/swagger-ui/) e o [Redoc](https://github.com/Redocly/redoc) para visualização da API.
+
+Para acessar via browser use as url:
 http://localhost:5173/swagger ou http://localhost:5173/redoc
 
 ## Technologies
