@@ -28,9 +28,9 @@ Acesse o README de cada projeto para mais informações sobre como executá-los.
 
 [Acessar README Frontend](https://github.com/hudson-nascimento/Dexian/blob/developer/frontend/docs/README.md)
 
-## Technologies
+## Tecnologias usadas
 
-* [ASP.NET](https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-7.0)
-* [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-7.0)
+* [ASP.NET](https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-8.0)
+* [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0)
 * [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core)
-* [Angular]()
+* [Angular](https://angular.io/docs)
