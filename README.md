@@ -24,9 +24,9 @@ Use preferencialmente as [IDEs](https://www.alura.com.br/artigos/o-que-e-uma-ide
 ## Configuração para execução
 Acesse o README de cada projeto para mais informações sobre como executá-los.
 
-[Acessar README Backend](https://github.com/hudson-nascimento/Dexian/blob/developer/backend/README.md)
+[Acessar README Backend](https://github.com/hudson-nascimento/Dexian/blob/developer/backend/docs/README.md)
 
-[Acessar README Frontend](https://github.com/hudson-nascimento/Dexian/blob/developer/frontend/README.md)
+[Acessar README Frontend](https://github.com/hudson-nascimento/Dexian/blob/developer/frontend/docs/README.md)
 
 ## Technologies
 
