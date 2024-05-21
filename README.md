@@ -24,13 +24,13 @@ Use preferencialmente as [IDEs](https://www.alura.com.br/artigos/o-que-e-uma-ide
 ## Configuração para execução
 Acesse o README de cada projeto para mais informações sobre como executá-los.
 
-[Acessar README Backend](https://github.com/hudson-nascimento/Dexian/blob/developer/backend/README.md)
+[Acessar README Backend](https://github.com/hudson-nascimento/Dexian/blob/developer/backend/docs/README.md)
 
-[Acessar README Frontend](https://github.com/hudson-nascimento/Dexian/blob/developer/frontend/README.md)
+[Acessar README Frontend](https://github.com/hudson-nascimento/Dexian/blob/developer/frontend/docs/README.md)
 
-## Technologies
+## Tecnologias usadas
 
-* [ASP.NET](https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-7.0)
-* [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-7.0)
+* [ASP.NET](https://learn.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-8.0)
+* [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0)
 * [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core)
-* [Angular]()
+* [Angular](https://angular.io/docs)
