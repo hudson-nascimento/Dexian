@@ -1,21 +1,6 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Alunos App</span>
-    <span class="example-spacer"></span>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-  </mat-toolbar-row>
+<mat-toolbar>
+  <span>Dexian</span>
 </mat-toolbar>
-<main class="mdc-top-app-bar--fixed-adjust">
+<main>
   <router-outlet />
 </main>

@@ -1,4 +1,4 @@
-export class Aluno {
+export interface Aluno {
   CodAluno?: number;
   Nome?: string;
   Nascimento?: Date;

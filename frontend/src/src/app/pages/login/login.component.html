@@ -1,20 +1,26 @@
-<h2>Login</h2>
-<p>{{ message }}</p>
-<p>
-  <button
-    mat-button
-    type="button"
-    (click)="login()"
-    *ngIf="!authenticationService.isLoggedIn"
-  >
-    Login
-  </button>
-  <button
-    mat-button
-    type="button"
-    (click)="logout()"
-    *ngIf="authenticationService.isLoggedIn"
-  >
-    Logout
-  </button>
-</p>
+<article>
+  <mat-card class="login-card">
+    <mat-card-header>
+      <img class="logo" alt="logo-dexian" src="./../../../assets/dexian-logo-720x720.jpeg" width="100" />
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <h1></h1>
+        <div class="">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" class="form-control" id="floatingInput" placeholder="Digite seu endereço de e-mail"
+              matInput>
+          </mat-form-field>
+        </div>
+        <div class="">
+          <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" matInput>
+          </mat-form-field>
+        </div>
+        <button class="btn-dexian" mat-flat-button type="submit" (click)="login()">Continuar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</article>

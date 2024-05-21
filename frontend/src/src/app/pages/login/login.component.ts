@@ -1,12 +1,15 @@
+import { delay } from 'rxjs';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
-import { AuthenticationService } from '../../_services/authentication.service';
+import { AuthenticationService } from '../../services/authentication.service';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-login',
@@ -17,40 +20,29 @@ import { CommonModule } from '@angular/common';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatCardModule,
+
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  message: string;
 
   constructor(
     public authenticationService: AuthenticationService,
-    public router: Router
-  ) {
-    this.message = this.getMessage();
-  }
-
-  getMessage() {
-    return this.authenticationService.isLoggedIn ? 'logado' : 'deslogado';
-  }
+    public router: Router,
+    private _snackBar: MatSnackBar
+  ) { }
 
   login() {
-    this.message = 'Logando...';
 
-    this.authenticationService.login().subscribe(() => {
-      this.message = this.getMessage();
-      if (this.authenticationService.isLoggedIn) {
-        const redirectUrl = '/aluno';
 
-        // Redireciona o usuario
-        this.router.navigate([redirectUrl]);
-      }
-    });
+    this.openSnackBar('Usuário logado', 'Ok');
+    const redirectUrl = '/aluno';
+    this.router.navigate([redirectUrl]);
   }
 
-  logout() {
-    this.authenticationService.logout();
-    this.message = this.getMessage();
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action).afterOpened;
   }
 }

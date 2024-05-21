@@ -1,4 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.btn-dexian {
+    color: #d4ff00 !important;
+    background-color: #000 !important;
+    border-radius: 20px;
+}
+
+.bg-login {
+    background-color: #000;
+    background-image: url("../src/assets/dexian-disys-logo-620x275.png");
+}
+
+.logo {
+    border-radius: 20px;
+    background-image: url("../src/assets/dexian-logo-720x720.jpeg");
+}
+
+.login-card {
+    padding: 200px;
+    width: auto;
+    align-items: center !important;
+}

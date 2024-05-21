@@ -2,28 +2,29 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { Observable } from 'rxjs';
-import { ResponseDataModel } from '../_models/response-data-model';
-import { Aluno } from '../_models/aluno';
-import { Service } from '../_models/service.model';
+import { ResponseModel } from '../models/response-data-model';
+import { Aluno } from '../models/aluno';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AlunoService implements Service<Aluno> {
-  private url = `${environment.urlAPI}/customer`;
+export class AlunoService {
+  private url = `${environment.baseUrlApi}/aluno`;
 
   constructor(private httpClient: HttpClient) {}
 
-  create(aluno: Aluno): Observable<ResponseDataModel<Aluno>> {
+  create(aluno: Aluno | null): Observable<ResponseModel<Aluno>> {
     aluno = aluno as Aluno;
-    return this.httpClient.post<ResponseDataModel<Aluno>>(
+    return this.httpClient.post<ResponseModel<Aluno>>(
       this.url + '/criar-alunos',
       aluno
     );
   }
 
-  findAll(): any {
-    return this.httpClient.get(this.url + '/obter-alunos');
+  findAll(): Observable<ResponseModel<Aluno[]>> {
+    return this.httpClient.get<ResponseModel<Aluno[]>>(
+      this.url + '/obter-alunos'
+    );
   }
 
   findOne(codAluno: number): any {
@@ -31,9 +32,10 @@ export class AlunoService implements Service<Aluno> {
       `${this.url}/obter-aluno-por-codigo?${codAluno}`
     );
   }
-  update(codAluno: number, aluno: Aluno): Observable<ResponseDataModel<Aluno>> {
+
+  update(codAluno: number, aluno: Aluno): Observable<ResponseModel<Aluno>> {
     aluno = aluno as Aluno;
-    return this.httpClient.put<ResponseDataModel<Aluno>>(
+    return this.httpClient.put<ResponseModel<Aluno>>(
       `${this.url}/${codAluno}`,
       aluno
     );

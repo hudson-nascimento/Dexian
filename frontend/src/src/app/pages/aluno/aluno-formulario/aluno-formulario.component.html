@@ -1,19 +1,57 @@
-<form (ngSubmit)="onSubmit()" class="" formGroup="alunoForm">
-  <div class="form-header">
-    <div class="title">Adicionar novo aluno</div>
-  </div>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <mat-form-field>
-    <mat-label>Phone number</mat-label>
-    <!-- <example-tel-input formControlName="tel" required></example-tel-input> -->
-    <mat-icon matSuffix>phone</mat-icon>
-    <mat-hint>Include area code</mat-hint>
-  </mat-form-field>
-</form>
+<mat-card>
+  <h1>{{ btnTitulo }}</h1>
+
+  <form formGroup="alunoForm" (ngSubmit)="submit()">
+    <input type="hidden" value="" formControlName="codAluno" />
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label>Nome:</mat-label>
+        <input
+          matInput
+          id="nome"
+          type="text"
+          class="form-control text-dark"
+          formControlName="nome"
+          placeholder="Insira o nome!"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label>Sobrenome:</mat-label>
+        <input
+          matInput
+          id="sobrenome"
+          type="text"
+          class="form-control text-dark"
+          formControlName="sobrenome"
+          placeholder="Insira o sobrenome!"
+          required
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="btn-box">
+      <button
+        type="submit"
+        class="btn btn-success w-50"
+        [disabled]="!alunoForm.valid"
+        mat-raised-button
+        color="accent"
+      >
+        {{ btnAcao }}
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary w-50"
+        routerLink=""
+        mat-raised-button
+      >
+        Voltar
+      </button>
+    </div>
+  </form>
+</mat-card>

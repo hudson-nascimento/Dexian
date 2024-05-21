@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Observable, of, delay, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticationService {
-  constructor() {}
+  constructor(public router: Router) { }
 
   isLoggedIn = false;
 
@@ -19,7 +21,9 @@ export class AuthenticationService {
     );
   }
 
-  logout(): void {
+  logout() {
+    const redirectUrl = '/login';
+    this.router.navigate([redirectUrl]);
     this.isLoggedIn = false;
   }
 }
