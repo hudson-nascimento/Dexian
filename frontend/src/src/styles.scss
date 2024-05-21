@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use './custom-theme.scss';
 
 html,
 body {
@@ -10,10 +11,8 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.btn-dexian {
-    color: #d4ff00 !important;
-    background-color: #000 !important;
-    border-radius: 20px;
+.btn {
+    margin: 15px;
 }
 
 .bg-login {
@@ -24,10 +23,4 @@ body {
 .logo {
     border-radius: 20px;
     background-image: url("../src/assets/dexian-logo-720x720.jpeg");
-}
-
-.login-card {
-    padding: 200px;
-    width: auto;
-    align-items: center !important;
 }

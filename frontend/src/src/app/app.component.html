@@ -1,6 +1,19 @@
-<mat-toolbar>
-  <span>Dexian</span>
-</mat-toolbar>
+<!-- <mat-toolbar>
+  <mat-toolbar-row>
+    <span>Dexian</span>
+    <span class="spacer"></span>
+    <button type="button" mat-icon-button *ngIf="isLoggedIn" [matMenuTriggerFor]="menu"
+      aria-label="icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button type="button" mat-menu-item color="warn" (click)="logout()">
+        <span>Sair</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar> -->
+
 <main>
   <router-outlet />
 </main>

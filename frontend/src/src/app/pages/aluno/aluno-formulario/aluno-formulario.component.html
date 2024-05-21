@@ -1,57 +1,27 @@
-<mat-card>
-  <h1>{{ btnTitulo }}</h1>
+<form formGroup="alunoForm" (ngSubmit)="submit()">
 
-  <form formGroup="alunoForm" (ngSubmit)="submit()">
-    <input type="hidden" value="" formControlName="codAluno" />
+  <div class="">
+    <mat-form-field>
+      <mat-label>Nome:</mat-label>
+      <input matInput id="nome" type="text" class="form-control text-dark" formControlName="nome"
+        placeholder="Insira o nome!" required />
+    </mat-form-field>
+  </div>
 
-    <div class="input-box">
-      <mat-form-field>
-        <mat-label>Nome:</mat-label>
-        <input
-          matInput
-          id="nome"
-          type="text"
-          class="form-control text-dark"
-          formControlName="nome"
-          placeholder="Insira o nome!"
-          required
-        />
-      </mat-form-field>
-    </div>
+  <div class="">
+    <mat-form-field>
+      <mat-label>Sobrenome:</mat-label>
+      <input matInput id="sobrenome" type="text" class="form-control text-dark" formControlName="sobrenome"
+        placeholder="Insira o sobrenome!" required />
+    </mat-form-field>
+  </div>
 
-    <div class="input-box">
-      <mat-form-field>
-        <mat-label>Sobrenome:</mat-label>
-        <input
-          matInput
-          id="sobrenome"
-          type="text"
-          class="form-control text-dark"
-          formControlName="sobrenome"
-          placeholder="Insira o sobrenome!"
-          required
-        />
-      </mat-form-field>
-    </div>
-
-    <div class="btn-box">
-      <button
-        type="submit"
-        class="btn btn-success w-50"
-        [disabled]="!alunoForm.valid"
-        mat-raised-button
-        color="accent"
-      >
-        {{ btnAcao }}
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary w-50"
-        routerLink=""
-        mat-raised-button
-      >
-        Voltar
-      </button>
-    </div>
-  </form>
-</mat-card>
+  <div class="">
+    <button type="submit" [disabled]="!alunoForm.valid" mat-raised-button color="accent">
+      {{ btnAcao }}
+    </button>
+    <button type="button" routerLink="" mat-raised-button>
+      Voltar
+    </button>
+  </div>
+</form>

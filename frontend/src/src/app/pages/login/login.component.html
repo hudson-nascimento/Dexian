@@ -1,26 +1,29 @@
 <article>
-  <mat-card class="login-card">
-    <mat-card-header>
-      <img class="logo" alt="logo-dexian" src="./../../../assets/dexian-logo-720x720.jpeg" width="100" />
-    </mat-card-header>
-    <mat-card-content>
+  <div class="container">
+    <div class="child">
+      <div class="container">
+        <img class="logo" alt="logo-dexian" src="./../../../assets/dexian-logo-720x720.jpeg" width="100" />
+      </div>
       <form>
-        <h1></h1>
-        <div class="">
+        <h1>Login</h1>
+        <div class="container">
           <mat-form-field appearance="outline">
-            <mat-label>Email</mat-label>
-            <input type="email" class="form-control" id="floatingInput" placeholder="Digite seu endereço de e-mail"
-              matInput>
+            <mat-label>E-mail</mat-label>
+            <input matInput placeholder="Digite seu e-mail" [formControl]="email" (blur)="updateErrorMessage()"
+              required>
+            @if (email.invalid) {
+            <mat-error>{{errorMessage}}</mat-error>
+            }
           </mat-form-field>
         </div>
-        <div class="">
+        <div class="container">
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
             <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" matInput>
           </mat-form-field>
         </div>
-        <button class="btn-dexian" mat-flat-button type="submit" (click)="login()">Continuar</button>
+        <button mat-flat-button color="primary" type="button" (click)="login()">Continuar</button>
       </form>
-    </mat-card-content>
-  </mat-card>
+    </div>
+  </div>
 </article>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { subscribe } from 'diagnostics_channel';
 
 import { Observable, of, delay, tap } from 'rxjs';
 
@@ -16,14 +17,24 @@ export class AuthenticationService {
 
   login(): Observable<boolean> {
     return of(true).pipe(
-      delay(1000),
-      tap(() => (this.isLoggedIn = true))
+      tap(() => (
+        this.isLoggedIn = true
+      ))
     );
   }
 
-  logout() {
-    const redirectUrl = '/login';
-    this.router.navigate([redirectUrl]);
-    this.isLoggedIn = false;
+  logout(): Observable<boolean> {
+    return of(true).pipe(
+      tap(() => (
+        this.isLoggedIn = false
+      ))
+    );
   }
+
+  // logout() {
+  //   this.isLoggedIn = false;
+  //   const redirectUrl = '/login';
+  //   this.router.navigate([redirectUrl]);
+
+  // }
 }
