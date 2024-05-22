@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dexian.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b7545b9cbffeec2e84bf56c956aed00428eb343")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1035334309a8429253c08f822393aa629db13210")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dexian.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dexian.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

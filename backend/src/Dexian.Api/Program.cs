@@ -38,6 +38,17 @@ try
         };
     });
 
+    builder.Services.AddCors(options => options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins(
+            "https://localhost:7232/v1/aluno",
+            "https://localhost:7232/v1/escola",
+            "http://localhost:7232",
+            "https://localhost:7232");
+    }));
+
+
+
     var app = builder.Build();
 
     // Information about API
@@ -53,10 +64,17 @@ try
             config.DocExpansion = "list";
         }));
     }
+
+    app.UseCors(builder => builder
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        );
+
     app.UseReDoc(options =>
-        {
-            options.Path = "/redoc";
-        });
+    {
+        options.Path = "/redoc";
+    });
 
     // Configura Log
     var logger = new LoggerConfiguration()

@@ -5,7 +5,7 @@ namespace Dexian.Entities;
 /// <summary>
 /// Representa as propriedades de <see cref="Escola"/>
 /// </summary>
-public class Escola : AuditableEntity
+public class Escola
 {
     [Key]
     public int CodEscola { get; set; }    
