@@ -4,7 +4,7 @@ import { AlunoListaComponent } from './aluno-lista/aluno-lista.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, } from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs'
 import { Location, CommonModule } from '@angular/common';
 import { Router, RouterOutlet } from '@angular/router';
@@ -40,7 +40,8 @@ export class AlunoComponent implements OnInit {
     private location: Location,
     public router: Router,
     public dialog: MatDialog,
-    public authenticationService: AuthenticationService,) { }
+    public authenticationService: AuthenticationService,
+  ) { }
 
   ngOnInit(): void {
     this.isLoggedIn = this.authenticationService.isLoggedIn;
@@ -52,7 +53,14 @@ export class AlunoComponent implements OnInit {
   }
 
   openDialog(): void {
+    const dialogRef = this.dialog.open(AlunoFormularioComponent, {
+      width: '100%',
+    });
 
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+
+    // });
   }
 
   goback(): void {

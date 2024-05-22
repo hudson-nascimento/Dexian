@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { subscribe } from 'diagnostics_channel';
 
-import { Observable, of, delay, tap } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -25,6 +24,5 @@ export class AuthenticationService {
 
   logout() {
     this.isLoggedIn = false;
-    //this.router.navigateByUrl('http://localhost:4200/')
   }
 }

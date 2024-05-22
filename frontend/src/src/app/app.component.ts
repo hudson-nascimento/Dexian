@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, ErrorHandler } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -15,7 +15,7 @@ import { AlunoComponent } from "./pages/aluno/aluno.component";
   styleUrls: ['./app.component.scss'],
   imports: [CommonModule, RouterOutlet, MatToolbarModule, MatIconModule, MatMenuModule, AlunoComponent]
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, ErrorHandler {
   isLoggedIn!: boolean;
 
   constructor(public authenticationService: AuthenticationService,) { }
@@ -24,8 +24,11 @@ export class AppComponent implements AfterViewInit {
     this.isLoggedIn = this.authenticationService.isLoggedIn;
   }
 
-  // logout() {
-  //   this.isLoggedIn = false;
-  //   this.authenticationService.logout();
-  // }
+  handleError(error: any): void {
+    // Log the error to the console.
+    console.error(error);
+
+    // Display a friendly error message to the user.
+    alert('An unexpected error occurred. Please try again later.');
+  }
 }

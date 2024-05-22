@@ -1,12 +1,75 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projeto\\Dexian\\backend\\src\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BEFACF1B-0442-4814-A501-9836C1DE687F}|Dexian.Api\\Dexian.Api.csproj|d:\\projeto\\dexian\\backend\\src\\dexian.api\\entities\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEFACF1B-0442-4814-A501-9836C1DE687F}|Dexian.Api\\Dexian.Api.csproj|solutionrelative:dexian.api\\entities\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEFACF1B-0442-4814-A501-9836C1DE687F}|Dexian.Api\\Dexian.Api.csproj|d:\\projeto\\dexian\\backend\\src\\dexian.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEFACF1B-0442-4814-A501-9836C1DE687F}|Dexian.Api\\Dexian.Api.csproj|solutionrelative:dexian.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEFACF1B-0442-4814-A501-9836C1DE687F}|Dexian.Api\\Dexian.Api.csproj|d:\\projeto\\dexian\\backend\\src\\dexian.api\\entities\\escola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEFACF1B-0442-4814-A501-9836C1DE687F}|Dexian.Api\\Dexian.Api.csproj|solutionrelative:dexian.api\\entities\\escola.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projeto\\Dexian\\backend\\src\\Dexian.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Dexian.Api\\Program.cs",
+              "ToolTip": "D:\\Projeto\\Dexian\\backend\\src\\Dexian.Api\\Program.cs",
+              "RelativeToolTip": "Dexian.Api\\Program.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAF0AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T17:18:13.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Escola.cs",
+              "DocumentMoniker": "D:\\Projeto\\Dexian\\backend\\src\\Dexian.Api\\Entities\\Escola.cs",
+              "RelativeDocumentMoniker": "Dexian.Api\\Entities\\Escola.cs",
+              "ToolTip": "D:\\Projeto\\Dexian\\backend\\src\\Dexian.Api\\Entities\\Escola.cs",
+              "RelativeToolTip": "Dexian.Api\\Entities\\Escola.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T17:01:26.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Aluno.cs",
+              "DocumentMoniker": "D:\\Projeto\\Dexian\\backend\\src\\Dexian.Api\\Entities\\Aluno.cs",
+              "RelativeDocumentMoniker": "Dexian.Api\\Entities\\Aluno.cs",
+              "ToolTip": "D:\\Projeto\\Dexian\\backend\\src\\Dexian.Api\\Entities\\Aluno.cs",
+              "RelativeToolTip": "Dexian.Api\\Entities\\Aluno.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T17:01:05.617Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,27 +1,55 @@
-<form formGroup="alunoForm" (ngSubmit)="submit()">
+<article>
+  <form formGroup="alunoForm" class="container" ngSubmit="submit()">
 
-  <div class="">
-    <mat-form-field>
-      <mat-label>Nome:</mat-label>
-      <input matInput id="nome" type="text" class="form-control text-dark" formControlName="nome"
-        placeholder="Insira o nome!" required />
-    </mat-form-field>
-  </div>
+    <div class="">
+      <div class="">
+        <mat-form-field appearance="outline">
+          <mat-label>Nome:</mat-label>
+          <input matInput type="text" formControlName="nome" placeholder="Insira o nome" required />
+        </mat-form-field>
+      </div>
 
-  <div class="">
-    <mat-form-field>
-      <mat-label>Sobrenome:</mat-label>
-      <input matInput id="sobrenome" type="text" class="form-control text-dark" formControlName="sobrenome"
-        placeholder="Insira o sobrenome!" required />
-    </mat-form-field>
-  </div>
+      <div class="">
+        <mat-form-field appearance="outline">
+          <mat-label>Data nascimento:</mat-label>
+          <input matInput type="text" formControlName="nascimento" placeholder="Insira data nascimento" required />
+        </mat-form-field>
+      </div>
 
-  <div class="">
-    <button type="submit" [disabled]="!alunoForm.valid" mat-raised-button color="accent">
-      {{ btnAcao }}
-    </button>
-    <button type="button" routerLink="" mat-raised-button>
-      Voltar
-    </button>
-  </div>
-</form>
+      <div class="">
+        <mat-form-field appearance="outline">
+          <mat-label>CPF:</mat-label>
+          <input matInput type="text" formControlName="cpf" placeholder="Insira o CPF" required />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="">
+        <mat-form-field appearance="outline">
+          <mat-label>Endereço:</mat-label>
+          <input matInput type="text" formControlName="endereco" placeholder="Insira o Endereço" required />
+        </mat-form-field>
+      </div>
+
+      <div class="">
+        <mat-form-field appearance="outline">
+          <mat-label>Celular:</mat-label>
+          <input matInput type="text" formControlName="celular" placeholder="Insira o Celular" required />
+        </mat-form-field>
+      </div>
+
+      <div class="">
+        <mat-form-field appearance="outline">
+          <mat-label>Escola:</mat-label>
+          <input matInput type="text" formControlName="escola" placeholder="Insira o codigo da escola" required />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="">
+      <button mat-flat-button color="primary" type="submit" class="btn" 
+        (click)="onSubmit()">Adicionar</button>
+    </div>
+  </form>
+</article>

@@ -8,24 +8,31 @@ import { Aluno } from '../models/aluno';
 @Injectable({
   providedIn: 'root',
 })
+
 export class AlunoService {
-  private url = `${environment.baseUrlApi}/aluno`;
+  private url = `${environment.baseUrlApi}`;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
-  create(aluno: Aluno | null): Observable<ResponseModel<Aluno>> {
-    aluno = aluno as Aluno;
-    return this.httpClient.post<ResponseModel<Aluno>>(
-      this.url + '/criar-alunos',
+  create(aluno: Aluno): Observable<Aluno> {
+    return this.httpClient.post<Aluno>(
+      this.url + '/criar-aluno',
       aluno
     );
   }
 
-  findAll(): Observable<ResponseModel<Aluno[]>> {
-    return this.httpClient.get<ResponseModel<Aluno[]>>(
+  findAll(): Observable<Aluno[]> {
+    return this.httpClient.get<Aluno[]>(
       this.url + '/obter-alunos'
     );
   }
+
+
+  // findAll(): Observable<ResponseModel<Aluno[]>> {
+  //   return this.httpClient.get<ResponseModel<Aluno[]>>(
+  //     this.url + '/obter-alunos'
+  //   );
+  // }
 
   findOne(codAluno: number): any {
     return this.httpClient.get(
