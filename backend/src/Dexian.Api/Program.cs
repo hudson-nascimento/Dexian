@@ -41,13 +41,9 @@ try
     builder.Services.AddCors(options => options.AddDefaultPolicy(builder =>
     {
         builder.WithOrigins(
-            "https://localhost:7232/v1/aluno",
-            "https://localhost:7232/v1/escola",
-            "http://localhost:7232",
-            "https://localhost:7232");
+            "http://localhost:4200",
+            "https://localhost:4200");
     }));
-
-
 
     var app = builder.Build();
 
@@ -56,13 +52,12 @@ try
     {
         app.UseOpenApi();
         app.UseSwaggerUi(config =>
-        app.UseSwaggerUi(config =>
         {
             config.DocumentTitle = $"Alunos API - {app.Environment.EnvironmentName} Environment";
             config.Path = "/swagger";
             config.DocumentPath = "/swagger/{documentName}/swagger.json";
             config.DocExpansion = "list";
-        }));
+        });
     }
 
     app.UseCors(builder => builder

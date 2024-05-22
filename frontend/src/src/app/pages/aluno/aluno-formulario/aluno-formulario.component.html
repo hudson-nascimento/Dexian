@@ -1,6 +1,6 @@
-<article>
-  <form formGroup="alunoForm" class="container" ngSubmit="submit()">
-
+<article class="container">
+  <h1>Cadastro</h1>
+  <form [formGroup]="alunoForm" (ngSubmit)="onSubmit()">
     <div class="">
       <div class="">
         <mat-form-field appearance="outline">
@@ -48,8 +48,7 @@
     </div>
 
     <div class="">
-      <button mat-flat-button color="primary" type="submit" class="btn" 
-        (click)="onSubmit()">Adicionar</button>
+      <button mat-flat-button color="primary" type="submit">Adicionar</button>
     </div>
   </form>
 </article>

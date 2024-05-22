@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { Observable } from 'rxjs';
@@ -15,6 +15,7 @@ export class AlunoService {
   constructor(private httpClient: HttpClient) { }
 
   create(aluno: Aluno): Observable<Aluno> {
+    aluno as Aluno;
     return this.httpClient.post<Aluno>(
       this.url + '/criar-aluno',
       aluno
@@ -26,13 +27,6 @@ export class AlunoService {
       this.url + '/obter-alunos'
     );
   }
-
-
-  // findAll(): Observable<ResponseModel<Aluno[]>> {
-  //   return this.httpClient.get<ResponseModel<Aluno[]>>(
-  //     this.url + '/obter-alunos'
-  //   );
-  // }
 
   findOne(codAluno: number): any {
     return this.httpClient.get(

@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Dexian.Api\\Program.cs",
               "ToolTip": "D:\\Projeto\\Dexian\\backend\\src\\Dexian.Api\\Program.cs",
               "RelativeToolTip": "Dexian.Api\\Program.cs",
-              "ViewState": "AQIAAJcAAAAAAAAAAAAgwMIAAAABAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAADwv2kAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T17:18:13.381Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Dexian.Api\\Entities\\Escola.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:01:26.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T17:01:26.395Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Dexian.Api\\Entities\\Aluno.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T17:01:05.617Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-22T17:01:05.617Z"
             }
           ]
         }

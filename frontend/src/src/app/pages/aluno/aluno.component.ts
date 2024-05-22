@@ -53,14 +53,9 @@ export class AlunoComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(AlunoFormularioComponent, {
+   this.dialog.open(AlunoFormularioComponent, {
       width: '100%',
     });
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-
-    // });
   }
 
   goback(): void {
