@@ -33,11 +33,12 @@ export class LoginComponent {
 
   email = new FormControl('', [Validators.required, Validators.email]);
   errorMessage!: string;
+  senha = new FormControl('', [Validators.required, Validators.min(3)])
 
   constructor(
     public authenticationService: AuthenticationService,
     public router: Router,
-    private _snackBar: MatSnackBar
+    private snackBar: MatSnackBar
   ) {
     merge(this.email.statusChanges, this.email.valueChanges)
       .pipe(takeUntilDestroyed())
@@ -49,11 +50,13 @@ export class LoginComponent {
   }
 
   login() {
-    this.authenticationService.login()
-      .subscribe(r => r);
-      
-    console.log('Olha: ', this.authenticationService.isLoggedIn);
+    if (this.senha.valid && this.email.valid) {
+      this.authenticationService.login()
+        .subscribe(result => result);
 
+      console.log('Response Login: ', this.authenticationService.isLoggedIn)
+    }
+    // Valida se usuário logou
     if (this.authenticationService.isLoggedIn) {
       this.openSnackBar('Você entrou!', 'Continuar')
       const redirectUrl = '/aluno';
@@ -62,7 +65,7 @@ export class LoginComponent {
   }
 
   openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action).afterOpened;
+    this.snackBar.open(message, action, { duration: 3000 });
   }
 
   updateErrorMessage() {

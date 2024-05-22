@@ -23,18 +23,8 @@ export class AuthenticationService {
     );
   }
 
-  logout(): Observable<boolean> {
-    return of(true).pipe(
-      tap(() => (
-        this.isLoggedIn = false
-      ))
-    );
+  logout() {
+    this.isLoggedIn = false;
+    //this.router.navigateByUrl('http://localhost:4200/')
   }
-
-  // logout() {
-  //   this.isLoggedIn = false;
-  //   const redirectUrl = '/login';
-  //   this.router.navigate([redirectUrl]);
-
-  // }
 }

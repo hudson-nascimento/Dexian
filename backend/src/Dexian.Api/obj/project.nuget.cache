@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lMKnx/VlvBviFH8g8Wo0nQQMM/HlQUHuiCke6qm/Nlawyb4EDWpo+kDZ6JJwl7ITU6HhQBi+wqkMFM2/DauZHg==",
+  "dgSpecHash": "EpKZKQmaqzC3QTkza0VMO6I7YK7g8xMCC0a8ChYvszNbHHfGDyNS8x3EXrwBo31hg9bmwu9htD6+XglbI5xGiQ==",
   "success": true,
   "projectFilePath": "D:\\Projeto\\Dexian\\backend\\src\\Dexian.Api\\Dexian.Api.csproj",
   "expectedPackageFiles": [
@@ -79,11 +79,7 @@
     "C:\\Users\\conta\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\conta\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\conta\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\conta\\.nuget\\packages\\yamldotnet\\13.7.1\\yamldotnet.13.7.1.nupkg.sha512",
-    "C:\\Users\\conta\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.1\\microsoft.netcore.app.ref.8.0.1.nupkg.sha512",
-    "C:\\Users\\conta\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.1\\microsoft.windowsdesktop.app.ref.8.0.1.nupkg.sha512",
-    "C:\\Users\\conta\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.1\\microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512",
-    "C:\\Users\\conta\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.1\\microsoft.netcore.app.host.win-x64.8.0.1.nupkg.sha512"
+    "C:\\Users\\conta\\.nuget\\packages\\yamldotnet\\13.7.1\\yamldotnet.13.7.1.nupkg.sha512"
   ],
   "logs": []
 }

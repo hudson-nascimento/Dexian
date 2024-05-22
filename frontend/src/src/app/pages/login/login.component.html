@@ -19,10 +19,10 @@
         <div class="container">
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha" matInput>
+            <input matInput placeholder="Senha" type="password" [formControl]="senha" required>
           </mat-form-field>
         </div>
-        <button mat-flat-button color="primary" type="button" (click)="login()">Continuar</button>
+        <button mat-flat-button color="primary" type="submit" (click)="login()">Continuar</button>
       </form>
     </div>
   </div>
