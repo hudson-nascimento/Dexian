@@ -12,29 +12,34 @@ import { AuthenticationService } from '../../services/authentication.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { EscolaFormularioComponent } from "../escola/escola-formulario/escola-formulario.component";
+import { EscolaListaComponent } from "../escola/escola-lista/escola-lista.component";
 
 @Component({
-  selector: 'app-aluno',
-  standalone: true,
-  imports: [
-    CommonModule,
-    AlunoFormularioComponent,
-    AlunoListaComponent,
-    MatButtonModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatTabsModule,
-    MatDialogModule,
-    RouterOutlet,
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule],
-  templateUrl: './aluno.component.html',
-  styleUrl: './aluno.component.scss',
+    selector: 'app-aluno',
+    standalone: true,
+    templateUrl: './aluno.component.html',
+    styleUrl: './aluno.component.scss',
+    imports: [
+        CommonModule,
+        AlunoFormularioComponent,
+        AlunoListaComponent,
+        MatButtonModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatTabsModule,
+        MatDialogModule,
+        RouterOutlet,
+        MatToolbarModule,
+        MatIconModule,
+        MatMenuModule,
+        EscolaFormularioComponent,
+        EscolaListaComponent
+    ]
 })
 export class AlunoComponent implements OnInit {
 
-  //isLoggedIn!: boolean;
+  isLoggedIn!: boolean;
 
   constructor(
     private location: Location,
@@ -44,16 +49,16 @@ export class AlunoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-   // this.isLoggedIn = this.authenticationService.isLoggedIn;
+    this.isLoggedIn = this.authenticationService.isLoggedIn;
   }
 
   // Adiciona aluno
   addData() {
-   // this.openDialog();
+    // this.openDialog();
   }
 
   openDialog(): void {
-   this.dialog.open(AlunoFormularioComponent, {
+    this.dialog.open(AlunoFormularioComponent, {
       width: '100%',
     });
   }
@@ -64,7 +69,8 @@ export class AlunoComponent implements OnInit {
 
   logout() {
     this.authenticationService.logout();
-    console.log('Response Login', this.authenticationService.isLoggedIn);
+    this.isLoggedIn = this.authenticationService.isLoggedIn;
+    console.log('Response Login', this.isLoggedIn);
     this.goback();
   }
 }

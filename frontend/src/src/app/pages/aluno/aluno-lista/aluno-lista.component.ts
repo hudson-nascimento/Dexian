@@ -8,18 +8,20 @@ import { Aluno } from '../../../models/aluno';
 import { AlunoService } from '../../../services/aluno.service';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-aluno-lista',
   standalone: true,
-  imports: [MatTableModule, MatFormFieldModule, MatInputModule, MatIcon, MatTextColumn, MatCheckboxModule, MatPaginatorModule],
+  imports: [MatTableModule, MatFormFieldModule, MatInputModule, MatIcon, MatTextColumn, MatCheckboxModule, MatPaginatorModule, MatButtonModule],
   templateUrl: './aluno-lista.component.html',
   styleUrl: './aluno-lista.component.scss',
 
 })
 export class AlunoListaComponent implements OnInit {
-  displayedColumns: string[] = ['codAluno', 'nome', 'nascimento', 'cpf', 'endereco', 'celular'];
+  displayedColumns: string[] = ['codAluno', 'nome', 'nascimento', 'cpf', 'endereco', 'celular', 'actions'];
   dataSource = new MatTableDataSource<Aluno>();
+  dataCount: boolean = true;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 

@@ -1,0 +1,17 @@
+<article class="container">
+  <h1>Cadastrar escola</h1>
+  <form [formGroup]="escolaForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Codigo:</mat-label>
+      <input matInput type="text" formControlName="codEscola" placeholder="Insira o código" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Descrição:</mat-label>
+      <input matInput type="text" formControlName="descricao" placeholder="Insira o codigo da escola" required />
+    </mat-form-field>
+    <div class="">
+      <button mat-flat-button color="primary" type="submit">Cadastrar</button>
+    </div>
+  </form>
+</article>

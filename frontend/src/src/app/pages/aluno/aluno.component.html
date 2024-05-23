@@ -1,6 +1,7 @@
-<!-- <mat-toolbar>
+<mat-toolbar>
   <mat-toolbar-row>
-    <span>Dexian</span>
+    <span (click)="logout()"> <img class="img" alt="logo-dexian"
+        src="https://dexian.com/wp-content/themes/dexian/images/dexian-logo.svg" width="75" /></span>
     <span class="spacer"></span>
     <button type="button" mat-icon-button *ngIf="isLoggedIn" [matMenuTriggerFor]="menu"
       aria-label="icon-button with a menu">
@@ -12,15 +13,17 @@
       </button>
     </mat-menu>
   </mat-toolbar-row>
-</mat-toolbar> -->
+</mat-toolbar>
+
 <mat-tab-group>
   <mat-tab label="Alunos">
     <div class="container">
-      <!-- <button mat-flat-button color="primary" type="button" class="btn"
-        (click)="addData()">Adicionar</button> -->
-        <app-aluno-formulario></app-aluno-formulario>
+      <app-aluno-formulario></app-aluno-formulario>
       <app-aluno-lista></app-aluno-lista>
     </div>
   </mat-tab>
-  <mat-tab label="Escolas"> Escola </mat-tab>
+  <mat-tab label="Escolas">
+    <app-escola-formulario></app-escola-formulario>
+    <!-- <app-escola-lista></app-escola-lista> -->
+  </mat-tab>
 </mat-tab-group>
