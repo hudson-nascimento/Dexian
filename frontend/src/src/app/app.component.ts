@@ -31,4 +31,8 @@ export class AppComponent implements AfterViewInit, ErrorHandler {
     // Display a friendly error message to the user.
     alert('An unexpected error occurred. Please try again later.');
   }
+
+  logout() {
+    this.authenticationService.logout();
+  }
 }

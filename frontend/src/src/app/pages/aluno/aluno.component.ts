@@ -34,7 +34,7 @@ import { MatMenuModule } from '@angular/material/menu';
 })
 export class AlunoComponent implements OnInit {
 
-  isLoggedIn!: boolean;
+  //isLoggedIn!: boolean;
 
   constructor(
     private location: Location,
@@ -44,12 +44,12 @@ export class AlunoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.isLoggedIn = this.authenticationService.isLoggedIn;
+   // this.isLoggedIn = this.authenticationService.isLoggedIn;
   }
 
   // Adiciona aluno
   addData() {
-    this.openDialog();
+   // this.openDialog();
   }
 
   openDialog(): void {

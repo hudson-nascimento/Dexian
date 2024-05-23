@@ -1,4 +1,4 @@
-<mat-toolbar>
+<!-- <mat-toolbar>
   <mat-toolbar-row>
     <span>Dexian</span>
     <span class="spacer"></span>
@@ -7,17 +7,18 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button type="button" mat-menu-item color="danger" (click)="logout()">
+      <button type="button" mat-menu-item (click)="logout()">
         <span>Sair</span>
       </button>
     </mat-menu>
   </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar> -->
 <mat-tab-group>
   <mat-tab label="Alunos">
     <div class="container">
-      <button mat-flat-button color="primary" type="button" class="btn"
-        (click)="addData()">Adicionar</button>
+      <!-- <button mat-flat-button color="primary" type="button" class="btn"
+        (click)="addData()">Adicionar</button> -->
+        <app-aluno-formulario></app-aluno-formulario>
       <app-aluno-lista></app-aluno-lista>
     </div>
   </mat-tab>

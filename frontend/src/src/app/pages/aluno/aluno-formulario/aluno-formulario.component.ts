@@ -13,7 +13,16 @@ import { AlunoService } from './../../../services/aluno.service';
 @Component({
   selector: 'app-aluno-formulario',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCardModule, MatButtonModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatCardModule,
+    MatButtonModule],
+
   templateUrl: './aluno-formulario.component.html',
   styleUrl: './aluno-formulario.component.scss',
 })
@@ -33,6 +42,7 @@ export class AlunoFormularioComponent {
     private alunoService: AlunoService,
     public router: Router,
     private location: Location,
+
   ) { }
 
   onSubmit(): void {
@@ -40,15 +50,21 @@ export class AlunoFormularioComponent {
       alert('Verifique as informações inseridas')
       this.alunoForm.reset();
       return;
-    } else {
-      this.alunoService.create(this.alunoForm.value).subscribe({
-        next: (res) => {
-          console.log(res);
-          //this.location.back();
-          this.router.navigate(['/aluno'])
-        },
-        error: (e) => console.error(e)
-      });
     }
+
+    this.alunoService.create(this.alunoForm.value).subscribe({
+      next: () => {
+      },
+      error: (e) => console.error(e)
+    });
+    this.reloadCurrentRoute();
   }
+
+  reloadCurrentRoute() {
+    let currentUrl = this.router.url;
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate([currentUrl]);
+    });
+  }
+
 }
